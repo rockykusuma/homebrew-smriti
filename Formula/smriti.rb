@@ -12,8 +12,8 @@ class Smriti < Formula
   license "MIT"
   head "https://github.com/rockykusuma/smriti.git", branch: "main"
 
-  depends_on macos: :ventura # AppKit/ScreenCaptureKit APIs; macOS 13+
   depends_on xcode: ["14.0", :build]
+  depends_on macos: :ventura # AppKit/ScreenCaptureKit APIs; macOS 13+
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
